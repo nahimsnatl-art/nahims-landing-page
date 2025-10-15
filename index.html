@@ -1,125 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAHIMS | Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <style>
-        /* A simple background for the Hero Section to make it stand out */
-        .hero-section {
-            background-color: #0d6efd; /* Bootstrap Blue */
-            color: white;
-            padding: 8rem 0;
-            text-align: center;
-        }
-        /* Style for the Executive cards */
-        .executive-card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAHIMS | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">NAHIMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="executives.html">Executives</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">NAHIMS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="executives.html">Executives</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+  <!-- Fullscreen Hero Section -->
+  <header class="hero-section d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center justify-content-between text-center text-md-start">
+
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h1 class="display-3 fw-bold mb-3 animate-text">Welcome to the Official NAHIMS Website</h1>
+          <p class="lead mb-4">The National Association of Health Information Management Students (NAHIMS) is the official student body for all Health Information Management students in Nigeria. We are the driving force behind academic excellence, professional growth, and leadership development, building a vibrant and informed community ready to lead the future of the HIM profession.</p>
+          <a href="about.html" class="btn btn-warning btn-lg">Discover Our Mission</a>
+        </div>
+
+        <div class="col-md-5 text-center">
+          <div class="hero-image-crop">
+            <img src="your-image-transparent.PNG" alt="NAHIMS President" class="hero-image img-fluid shadow-lg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h2 class="fw-bold mb-3">Who We Are</h2>
+          <p class="lead">The National Association of Health Information Management Students (NAHIMS) is the official student body for Health Information Management in Nigeria, uniting all students across tertiary institutions under a vision to build a vibrant, informed, and professional community.<br><br>
+
+Led by National President Olaniyi Olaoluwa, NAHIMS is the driving force behind academic excellence, professional development, and leadership growth for its members..</p>
+          <p>Our activities range from academic seminars and community outreach programs to sporting and social events, ensuring a holistic student experience.</p>
+          <a href="about.html" class="btn btn-outline-primary mt-3">Read Full Story</a>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="NAHIMS-LOGO-image-transparent.PNG" class="img-fluid rounded shadow" alt="NAHIMS Placeholder Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executives Section -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">Meet Our Leaders</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card executive-card h-100">
+            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 150px; height: 150px;" alt="President Photo">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">President's Name</h5>
+              <p class="card-text text-primary">President</p>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <header class="hero-section">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Welcome to the Official NAHIMS Website</h1>
-            <p class="lead mb-4">National Association of Health Information Management Students</p>
-            <a href="about.html" class="btn btn-warning btn-lg">Discover Our Mission</a>
-        </div>
-    </header>
-
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <h2 class="fw-bold mb-3">Who We Are</h2>
-                    <p class="lead">NAHIMS is the unifying body for all Health Information Management students at UCH. We are committed to promoting excellence in health data management and fostering the growth of future professionals.</p>
-                    <p>Our activities range from academic seminars and community outreach programs to sporting and social events, ensuring a holistic student experience.</p>
-                    <a href="about.html" class="btn btn-outline-primary mt-3">Read Full Story</a>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="https://via.placeholder.com/300" class="img-fluid rounded shadow" alt="NAHIMS Placeholder Image">
-                </div>
+        <div class="col">
+          <div class="card executive-card h-100">
+            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 150px; height: 150px;" alt="Vice President Photo">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">V.P.'s Name</h5>
+              <p class="card-text text-primary">Vice President</p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-5">Meet Our Leaders</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card executive-card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 150px; height: 150px;" alt="President Photo">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">President's Name</h5>
-                            <p class="card-text text-primary">President</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card executive-card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 150px; height: 150px;" alt="Vice President Photo">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">V.P.'s Name</h5>
-                            <p class="card-text text-primary">Vice President</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card executive-card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 150px; height: 150px;" alt="Secretary Photo">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Secretary's Name</h5>
-                            <p class="card-text text-primary">General Secretary</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col">
+          <div class="card executive-card h-100">
+            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3 rounded-circle" style="width: 150px; height: 150px;" alt="Secretary Photo">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Secretary's Name</h5>
+              <p class="card-text text-primary">General Secretary</p>
             </div>
-            <a href="executives.html" class="btn btn-link mt-4">View All Executives &rarr;</a>
+          </div>
         </div>
-    </section>
+      </div>
+      <a href="executives.html" class="btn btn-link mt-4">View All Executives &rarr;</a>
+    </div>
+  </section>
 
+ <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
-            <p class="mb-2">&copy; <span id="currentYear"></span> NAHIMS UCH Students' Association. All Rights Reserved.</p>
-            <p class="mb-0">Contact: +234 XXX XXX XXXX | Email: contact@nahims.com.ng</p>
+            <p class="mb-2">&copy; <span id="currentYear"></span> National Association of Health Information Management. All Rights Reserved.</p>
+            <p class="mb-0">Contact: +2349030475156 | Email: secretariat@nahims.com.ng</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        // Set the current year dynamically for the copyright notice
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -1,0 +1,111 @@
+/* --- Fullscreen Hero Section --- */
+.hero-section {
+  background-color: #0d6efd; /* Bootstrap Blue */
+  color: white;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Make content fill more space visually */
+.hero-section .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Hero Text --- */
+.hero-section h1 {
+  font-size: 3.5rem; /* larger title */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-section p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* --- Hero Image Crop --- */
+.hero-image-crop {
+  height: 600px; /* taller visible portion */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Hero Image --- */
+.hero-image {
+  max-width: 420px; /* much larger image */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+  animation: floatImage 4s ease-in-out infinite;
+  transition: filter 0.3s ease-in-out;
+}
+
+ 
+
+.hero-image:hover {
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+  cursor: pointer;
+}
+
+/* --- Floating Animation --- */
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- Text Animation --- */
+.animate-text {
+  opacity: 0;
+  animation: fadeInDown 1s ease-out 0.3s forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Executive Cards --- */
+.executive-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-section .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-image-crop {
+    height: 350px;
+  }
+
+  .hero-image {
+    max-width: 300px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
