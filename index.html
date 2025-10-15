@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahims - Get It Sorted</title>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply Inter font family and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8f8f8; /* Light gray background for contrast */
+        }
+        /* Custom scroll indicator for mobile/touch users */
+        .scroll-down-arrow {
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        /* Custom styles for the primary CTA button */
+        .cta-button-shadow {
+            box-shadow: 0 10px 20px -5px rgba(245, 158, 11, 0.4); /* Amber shadow */
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Application Container -->
+    <div id="app" class="min-h-screen antialiased">
+
+        <!-- Header/Navigation Bar -->
+        <header class="p-4 bg-white border-b border-gray-100 shadow-sm">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <a href="#" class="text-3xl font-extrabold text-indigo-700 tracking-tight">
+                    Nahims
+                </a>
+                <a href="#signup-form" class="hidden sm:inline-block px-4 py-2 text-sm font-semibold text-indigo-700 hover:text-indigo-900 transition duration-150">
+                    Join Waitlist
+                </a>
+            </div>
+        </header>
+
+        <!-- 1. Hero Section: The Main Pitch & CTA -->
+        <main class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                
+                <p class="text-indigo-600 font-semibold text-lg uppercase mb-3">
+                    The Easy Way to Get Organized
+                </p>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Stop Delaying.<br class="hidden sm:block"> <span class="text-indigo-700">Get It Sorted.</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto mb-10">
+                    Nahims is the simple, powerful tool that brings clarity to your chaos, effortlessly. <span class="font-bold text-green-600">Start solving your biggest problem today—it's FREE forever.</span>
+                </p>
+
+                <!-- Lead Capture Form (Above the fold) -->
+                <div id="signup-form" class="max-w-xl mx-auto bg-gray-50 p-6 rounded-xl shadow-2xl border border-gray-100">
+                    <form onsubmit="handleSignup(event)">
+                        <label for="email" class="sr-only">Enter your email</label>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" id="email" name="email" placeholder="Enter your best email address" required 
+                                class="w-full sm:flex-1 px-5 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 text-gray-800"
+                            >
+                            <button type="submit" 
+                                class="w-full sm:w-auto px-8 py-3 rounded-lg text-lg font-bold text-indigo-900 bg-amber-400 hover:bg-amber-500 cta-button-shadow transition duration-200"
+                            >
+                                Get It Sorted Now
+                            </button>
+                        </div>
+                        <p id="message" class="mt-4 text-sm font-medium text-gray-500"></p>
+                    </form>
+                </div>
+                
+                <p class="mt-3 text-sm text-gray-400">
+                    No credit card required. We respect your inbox.
+                </p>
+
+                <!-- Scroll Down Indicator -->
+                <div class="mt-16 pt-8 text-gray-400">
+                    <p class="text-sm uppercase tracking-widest">Learn More</p>
+                    <svg class="scroll-down-arrow w-8 h-8 mx-auto mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+
+            </div>
+        </main>
+        
+        <!-- 2. Features/Value Proposition Section -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-12">
+                    Clarity in Three Simple Steps
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Feature 1: Define -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-indigo-100">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <!-- Icon: Pin -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">1. Pinpoint Your Chaos</h3>
+                        <p class="text-gray-600">Easily identify and log the tasks, projects, or digital clutter holding you back. Get everything out of your head and into one system.</p>
+                    </div>
+
+                    <!-- Feature 2: Sort -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-indigo-100">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 text-amber-600 mb-4">
+                            <!-- Icon: Check Mark -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2l4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">2. Sort It Effortlessly</h3>
+                        <p class="text-gray-600">Our smart categorization tool structures your input automatically. Delegate, schedule, or archive with a simple drag-and-drop interface.</p>
+                    </div>
+
+                    <!-- Feature 3: Live Free -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-indigo-100">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-4">
+                            <!-- Icon: Sparkle/Star -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 2.286m-4.572 4.571L18 10m-3.928 5.857L11.75 21l-3.375-3.375m11.25-11.25L17 5m-2.25 5.5l-2.25 2.25M10.125 7.5L7.5 10.125m1.5-3.75l2.25-2.25M12 18h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">3. Feel the Freedom (FREE)</h3>
+                        <p class="text-gray-600">With your life organized, you can focus on what matters. Start with our powerful free plan, no hidden costs, just pure peace of mind.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3. Final Call to Action Block -->
+        <section class="py-16 bg-indigo-700">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+                    Ready to Stop Worrying?
+                </h2>
+                <p class="text-xl text-indigo-200 mb-8">
+                    Join thousands already using Nahims to bring order to their personal and work lives.
+                </p>
+                <a href="#signup-form" class="inline-block px-12 py-4 rounded-full text-xl font-bold text-indigo-900 bg-amber-400 hover:bg-amber-500 cta-button-shadow transition duration-200 shadow-lg">
+                    Start Your Free Account Today
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+                <p class="mb-2">© 2024 Nahims. All rights reserved.</p>
+                <div class="space-x-4 text-sm">
+                    <a href="#" class="hover:text-white transition duration-150">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition duration-150">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // JavaScript for form handling (to simulate submission and show a message)
+
+        const handleSignup = (event) => {
+            event.preventDefault(); // Stop default form submission
+            
+            const emailInput = document.getElementById('email');
+            const messageElement = document.getElementById('message');
+            const submitButton = event.target.querySelector('button');
+            
+            const userEmail = emailInput.value.trim();
+
+            if (!userEmail) {
+                messageElement.textContent = "Please enter a valid email address.";
+                messageElement.classList.remove('text-green-600');
+                messageElement.classList.add('text-red-600');
+                return;
+            }
+
+            // Simulate loading state
+            submitButton.textContent = "Joining...";
+            submitButton.disabled = true;
+
+            // Simulate API call delay (2 seconds)
+            setTimeout(() => {
+                // Success feedback
+                const thankYouMessage = `Awesome, ${userEmail}! You're sorted. We'll be in touch soon.`;
+                messageElement.textContent = thankYouMessage;
+                messageElement.classList.remove('text-red-600', 'text-gray-500');
+                messageElement.classList.add('text-green-600');
+                
+                // Reset button and input appearance
+                submitButton.textContent = "Success!";
+                emailInput.value = ''; // Clear the input field
+                
+                // Re-enable button after a short delay to keep the "Success" message visible
+                setTimeout(() => {
+                    submitButton.textContent = "Get It Sorted Now";
+                    submitButton.disabled = false;
+                }, 3000);
+
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
