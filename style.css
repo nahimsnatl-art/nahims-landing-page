@@ -1,5 +1,5 @@
 /* ====================================== */
-/* 🎨 NAHIMS Brand Color Palette & Roots */
+/* 耳 NAHIMS Brand Color Palette & Roots */
 /* ====================================== */
 :root {
   --primary-blue: #000A45; /* Dark Blue for primary elements */
@@ -8,7 +8,7 @@
 }
 
 /* ====================================== */
-/* 💻 General & Layout */
+/* 捗 General & Layout */
 /* ====================================== */
 
 /* --- Navbar Styling --- */
@@ -33,7 +33,7 @@ footer {
 }
 
 /* ====================================== */
-/* ✨ Hero Sections (Home & Other Pages) */
+/* 笨ｨ Hero Sections (Home & Other Pages) */
 /* ====================================== */
 
 /* --- Home Hero Section (Fullscreen) --- */
@@ -122,7 +122,7 @@ footer {
 }
 
 /* ====================================== */
-/* 🔘 Components & Utility */
+/* 曝 Components & Utility */
 /* ====================================== */
 
 /* --- Buttons --- */
@@ -141,17 +141,45 @@ footer {
   transform: translateY(-2px);
 }
 
+.btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+}
+
+
 /* --- Executive Cards --- */
 .executive-card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.executive-card .card-img-top {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
 /* --- Table Styles (for 'Chapters' page) --- */
 .table-primary {
   background-color: var(--primary-blue) !important;
   color: #ffffff !important;
 }
+
+/* --- Bootstrap Color Overrides --- */
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
 
 .status {
   display: inline-block;
@@ -185,7 +213,7 @@ footer {
 
 
 /* ====================================== */
-/* 📱 Responsive Adjustments */
+/* 導 Responsive Adjustments */
 /* ====================================== */
 
 @media (max-width: 992px) {
@@ -258,7 +286,7 @@ footer {
 }
 
 /* ====================================== */
-/* 🔄 Animations */
+/* 売 Animations */
 /* ====================================== */
 
 @keyframes floatImage {
@@ -277,7 +305,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 /* ====================================== */
-/* 🆕 New: Key Benefits Card Styling */
+/* New: Key Benefits Card Styling */
 /* ====================================== */
 
 /* Ensure the card has relative positioning for the overlay */

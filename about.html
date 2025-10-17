@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAHIMS | About Us</title>
-    <!-- Bootstrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Custom Styles -->
-    <style>
-        .hero-banner {
-            background-color: #0d6efd; 
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">NAHIMS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,11 +21,10 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <!-- 'active' class highlights the current page -->
-                        <a class="nav-link active" aria-current="page" href="executives.html">Executives</a>
+                        <a class="nav-link" href="executives.html">Executives</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="chapters.html">Accredited Chapters</a></li>
 
@@ -49,44 +38,40 @@
     </nav>
     
 
-    <!-- Page Header Banner -->
-    <header class="hero-banner">
+    <header class="page-hero d-flex align-items-center justify-content-center">
         <div class="container">
-            <h1 class="display-5 fw-bold">Our History and Vision</h1>
-            <p class="lead">Knowledge, Seruice, and Integrity.</p>
+            <h1 class="display-5 fw-bold">About Us</h1>
+            <p class="lead">Knowledge, Service, and Integrity.</p>
         </div>
     </header>
 
-    <!-- Main About Content Section -->
     <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mb-4">
-                    <h2 class="fw-bold mb-3 text-primary">Mission Statement</h2>
+                    <h2 >Mission Statement</h2>
                     <p class="fs-5">To make friendly environment and dymamic personalities from the members of the association; to encourage the best from diligent endeavour through the spirit of harmony, proficiency and leadership.<br>
-Furthermore, we seek to make members committed to their academics for an enriched professional ethics and standard.</p>
+                    Furthermore, we seek to make members committed to their academics for an enriched professional ethics and standard.</p>
                     
                     <hr class="my-4">
 
-                    <h2 class="fw-bold mb-3 mt-5">Our Objectives</h2>
-                    <ul>
-                        <li>To encourage the spirit of oneness, friendliness, cooperation and unity among the members.</li>
-                        <li>To enrich the academics, leadership development and vocational life of members.</li>
-                        <li>To portray and protect member's interest and the respectable image of the association anywhere, anytime.</li>
-                        <li>To involve and/or participate in the national development issues especially those of medico-social importance.</li>
-                         <li>To ensure that adequate and authentic lnformation is disseminated as at when due.</li>
-
-                    </ul>
+                  
+                    <h2 class="fw-bold mb-3 text-primary">Our Objectives</h2>
+                    <p class="fs-5">To encourage the spirit of oneness, friendliness, cooperation and unity among the members.</p>
+                    <p class="fs-5">To enrich the academics, leadership development and vocational life of members.</p>
+                    <p class="fs-5">To portray and protect member's interest and the respectable image of the association anywhere, anytime.</p>
+                    <p class="fs-5">To involve and/or participate in the national development issues especially those of medico-social importance.</p>
+                    <p class="fs-5">To ensure that adequate and authentic Information is disseminated as at when due.</p>
                 </div>
+
                 
-                <div class="col-lg-4">
-                    <!-- Sidebar/Quick Facts -->
+                <div class="col-lg-4"> 
                     <div class="card shadow-sm p-4 bg-light">
                         <h5 class="card-title fw-bold text-center mb-3">Quick Facts</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
                                 Founded
-                                <span class="badge bg-primary rounded-pill">2011</span>
+                                <span >2011</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
                                 Members
@@ -103,7 +88,6 @@ Furthermore, we seek to make members committed to their academics for an enriche
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
             <p class="mb-2">&copy; <span id="currentYear"></span> National Association of Health Information Management. All Rights Reserved.</p>
@@ -111,7 +95,6 @@ Furthermore, we seek to make members committed to their academics for an enriche
         </div>
     </footer>
 
-    <!-- Bootstrap JS Link and Dynamic Year Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
