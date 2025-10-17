@@ -21,6 +21,12 @@
   font-weight: 700;
   letter-spacing: 0.5px;
 }
+
+.navbar-logo {
+  height: 30px; /* You can adjust this height */
+  width: auto;
+}
+
 .nav-link.active,
 .nav-link:hover {
   color: var(--accent-yellow) !important; /* Gold on active/hover */
@@ -72,14 +78,14 @@ footer {
 
 /* --- Hero Image --- */
 .hero-image-crop {
-  height: auto;
+  height: 30vh;
   width: auto;
-  overflow: visible;
-  display: flex;
+  display: flex; /* Use flexbox to align content */
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-end; /* Align image to the bottom */
   background: transparent;
   box-shadow: none;
+  /* Removed overflow: hidden here */
 }
 
 .hero-image {
@@ -92,6 +98,8 @@ footer {
   box-shadow: none;
   background: transparent;
   transition: filter 0.3s ease;
+  object-fit: contain; /* Ensure the entire image is visible, scale down if needed */
+  object-position: bottom; /* Position the image at the bottom of its container */
 }
 
 .hero-image:hover {
@@ -162,6 +170,10 @@ footer {
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.executive-card .card-body {
+    color: var(--primary-blue); /* Default for light background cards */
 }
 
 
@@ -345,4 +357,12 @@ footer {
   /* Use stretched-link to make the whole card clickable, 
      but adding padding for visual separation */
   padding-bottom: 0.5rem; 
+}
+/* ====================================== */
+/* ｧ Modal Overrides */
+/* ====================================== */
+
+/* Ensure text inside the modal is dark and readable */
+#whatsappModal .modal-content {
+  color: #212529; /* Standard dark text color */
 }
