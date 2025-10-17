@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accredited Chapters | NAHIMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">NAHIMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="executives.html">Executives</a></li>
+          <li class="nav-item"><a class="nav-link active" href="chapters.html">Accredited Chapters</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Logo -->
+  <header class="page-hero text-white d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+        <img src="NAHIMS-LOGO-image-transparent.png" alt="NAHIMS Logo" class="hero-logo mb-3 mb-md-0">
+        <div>
+          <h1 class="display-5 fw-bold mb-2">Our Accredited Chapters</h1>
+          <p class="lead mb-0">Recognized NAHIMS Chapters and Their Financial Status</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Chapters Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-striped align-middle text-center shadow">
+          <thead class="table-primary">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Chapter Name</th>
+              <th scope="col">Chapter President</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>NAHIMS UCH</td>
+              <td>John Doe</td>
+              <td><span class="status financial">Financial</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>NAHIMS Eleyele</td>
+              <td>Mary Okafor</td>
+              <td><span class="status unfinancial">Unfinancial</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>NAHIMS CHTA</td>
+              <td>Ahmed Musa</td>
+              <td><span class="status financial">Financial</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-2">&copy; <span id="currentYear"></span> NAHIMS UCH Students' Association. All Rights Reserved.</p>
+      <p class="mb-0">Contact: +234 XXX XXX XXXX | Email: contact@nahims.com.ng</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
