@@ -38,3 +38,132 @@
         </div>
     </div>
 </nav>
+
+
+
+  <!-- Page Hero -->
+  <header class="page-hero text-center text-white d-flex align-items-center justify-content-center">
+    <div>
+      <h1 class="display-5 fw-bold mb-3">NAHIMS Blog & Voices</h1>
+      <p class="lead mb-0">Stay informed, inspired, and connected with the latest from NAHIMS.</p>
+    </div>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Main Blog Posts -->
+        <div class="col-lg-8 mb-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h4 class="card-title fw-bold">Building the Future of HIM in Nigeria</h4>
+              <p class="card-text text-muted">October 2025 | Admin</p>
+              <p class="card-text">Health Information Management is evolving rapidly, and NAHIMS is at the forefront of empowering students with leadership and innovation skills that redefine the future of data-driven healthcare.</p>
+              <a href="#" class="btn btn-warning">Read More</a>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm">
+            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h4 class="card-title fw-bold">Volunteerism: The Spirit of NAHIMS</h4>
+              <p class="card-text text-muted">September 2025 | Editor</p>
+              <p class="card-text">NAHIMS encourages all members to embrace community service as a way to grow, connect, and lead. Volunteerism remains a core pillar of our association’s culture and development.</p>
+              <a href="#" class="btn btn-warning">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          
+          <!-- Anonymous Message Box -->
+          <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">
+              <h5 class="mb-0">Send an Anonymous Message</h5>
+            </div>
+            <div class="card-body">
+              <form id="anonForm">
+  <textarea class="form-control" id="anonMessage" rows="4" placeholder="Type your message..." required></textarea>
+  <button type="submit" class="btn btn-warning w-100 mt-2">Submit</button>
+</form>
+<div id="anonSuccess" class="alert alert-success mt-3 d-none">✅ Message submitted anonymously!</div>
+
+            </div>
+          </div>
+
+          <!-- Trending Now -->
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+              <h5 class="mb-0">🔥 Trending Now</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="#">New Leadership Opportunities Announced</a></li>
+              <li class="list-group-item"><a href="#">HIM Week 2025: Theme & Plans Revealed</a></li>
+              <li class="list-group-item"><a href="#">Call for Mentors: The Future of HIM</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-2">&copy; <span id="currentYear"></span> NAHIMS UCH Students' Association. All Rights Reserved.</p>
+      <p class="mb-0">Contact: +234 XXX XXX XXXX | Email: contact@nahims.com.ng</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Simple simulation of anonymous message submission
+    const form = document.getElementById('anonForm');
+    const successAlert = document.getElementById('anonSuccess');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      successAlert.classList.remove('d-none');
+      form.reset();
+      setTimeout(() => successAlert.classList.add('d-none'), 3000);
+    });
+  </script>
+  <!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+  (function() {
+    emailjs.init("X8B_lsMX430ZPNraq"); // Replace with your EmailJS Public Key
+  })();
+
+  // Form submission handler
+  document.getElementById('anonForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.send("service_wwz3bsp", "template_3keftax", {
+      message: document.getElementById('anonMessage').value
+    }).then(
+      function() {
+        document.getElementById('anonSuccess').classList.remove('d-none');
+        document.getElementById('anonForm').reset();
+        setTimeout(() => {
+          document.getElementById('anonSuccess').classList.add('d-none');
+        }, 4000);
+      },
+      function(error) {
+        alert("❌ Message failed to send. Please try again.");
+        console.error("EmailJS error:", error);
+      }
+    );
+  });
+</script>
+
+</body>
+</html>

@@ -366,3 +366,35 @@ footer {
 #whatsappModal .modal-content {
   color: #212529; /* Standard dark text color */
 }
+
+
+/* --- Blog Page Styling --- */
+.page-hero {
+  background-color: #000A45;
+  color: white;
+  height: 30vh;
+}
+
+.card-header.bg-primary {
+  background-color: #000A45 !important;
+}
+
+.btn-warning {
+  background-color: #B3913C !important;
+  color: white !important;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-warning:hover {
+  background-color: #9a7e34 !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000A45;
+}
+
+a:hover {
+  color: #B3913C;
+}
