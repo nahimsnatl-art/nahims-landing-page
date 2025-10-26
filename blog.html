@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAHIMS | Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAHIMS Blog & Voices</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Page Hero --- */
+    .page-hero {
+      background-color: #000A45;
+      color: #fff;
+      height: 30vh;
+    }
+
+    /* --- Buttons --- */
+    .btn-warning {
+      background-color: #B3913C !important;
+      border: none;
+      color: #fff !important;
+      font-weight: 600;
+    }
+    .btn-warning:hover {
+      background-color: #9a7e34 !important;
+    }
+
+    /* --- Sidebar Headers --- */
+    .card-header.bg-primary {
+      background-color: #000A45 !important;
+    }
+
+    a {
+      color: #000A45;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #B3913C;
+    }
+  </style>
 </head>
-
 <body>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-    <img src="NAHIMS-LOGO-image-transparent.PNG" alt="NAHIMS Logo" class="navbar-logo me-2">
-    NAHIMS
-</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Our Blog</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="chapters.html">Accredited Chapters</a></li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand fw-bold" href="index.html">NAHIMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="executives.html">Executives</a></li>
+          <li class="nav-item"><a class="nav-link" href="chapters.html">Accredited Chapters</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-</nav>
-
-
+  </nav>
 
   <!-- Page Hero -->
-  <header class="page-hero text-center text-white d-flex align-items-center justify-content-center">
+  <header class="page-hero d-flex align-items-center justify-content-center text-center">
     <div>
       <h1 class="display-5 fw-bold mb-3">NAHIMS Blog & Voices</h1>
       <p class="lead mb-0">Stay informed, inspired, and connected with the latest from NAHIMS.</p>
@@ -53,25 +74,29 @@
   <section class="py-5 bg-light">
     <div class="container">
       <div class="row">
-        
-        <!-- Main Blog Posts -->
+        <!-- Blog Posts -->
         <div class="col-lg-8 mb-4">
           <div class="card mb-4 shadow-sm">
-            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image">
+            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image" />
             <div class="card-body">
               <h4 class="card-title fw-bold">Building the Future of HIM in Nigeria</h4>
               <p class="card-text text-muted">October 2025 | Admin</p>
-              <p class="card-text">Health Information Management is evolving rapidly, and NAHIMS is at the forefront of empowering students with leadership and innovation skills that redefine the future of data-driven healthcare.</p>
+              <p class="card-text">
+                Health Information Management is evolving rapidly, and NAHIMS is at the forefront of empowering students with
+                leadership and innovation skills that redefine the future of data-driven healthcare.
+              </p>
               <a href="#" class="btn btn-warning">Read More</a>
             </div>
           </div>
 
           <div class="card mb-4 shadow-sm">
-            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image">
+            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image" />
             <div class="card-body">
               <h4 class="card-title fw-bold">Volunteerism: The Spirit of NAHIMS</h4>
               <p class="card-text text-muted">September 2025 | Editor</p>
-              <p class="card-text">NAHIMS encourages all members to embrace community service as a way to grow, connect, and lead. Volunteerism remains a core pillar of our association’s culture and development.</p>
+              <p class="card-text">
+                NAHIMS encourages all members to embrace community service as a way to grow, connect, and lead. Volunteerism remains a core pillar of our association’s culture and development.
+              </p>
               <a href="#" class="btn btn-warning">Read More</a>
             </div>
           </div>
@@ -79,7 +104,6 @@
 
         <!-- Sidebar -->
         <div class="col-lg-4">
-          
           <!-- Anonymous Message Box -->
           <div class="card shadow-sm mb-4">
             <div class="card-header bg-primary text-white">
@@ -87,11 +111,20 @@
             </div>
             <div class="card-body">
               <form id="anonForm">
-  <textarea class="form-control" id="anonMessage" rows="4" placeholder="Type your message..." required></textarea>
-  <button type="submit" class="btn btn-warning w-100 mt-2">Submit</button>
-</form>
-<div id="anonSuccess" class="alert alert-success mt-3 d-none">✅ Message submitted anonymously!</div>
-
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    id="anonMessage"
+                    rows="4"
+                    placeholder="Type your message..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning w-100">Submit</button>
+              </form>
+              <div id="anonSuccess" class="alert alert-success mt-3 d-none">
+                ✅ Message submitted anonymously!
+              </div>
             </div>
           </div>
 
@@ -106,7 +139,6 @@
               <li class="list-group-item"><a href="#">Call for Mentors: The Future of HIM</a></li>
             </ul>
           </div>
-
         </div>
       </div>
     </div>
@@ -116,54 +148,40 @@
   <footer class="bg-dark text-white py-4 mt-5">
     <div class="container text-center">
       <p class="mb-2">&copy; <span id="currentYear"></span> NAHIMS UCH Students' Association. All Rights Reserved.</p>
-      <p class="mb-0">Contact: +234 XXX XXX XXXX | Email: contact@nahims.com.ng</p>
+      <p class="mb-0">Contact: +234 XXX XXX XXXX | Email: secretariat@nahims.com.ng</p>
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Simple simulation of anonymous message submission
-    const form = document.getElementById('anonForm');
-    const successAlert = document.getElementById('anonSuccess');
-    form.addEventListener('submit', (e) => {
+  <!-- Google Apps Script Integration -->
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    document.getElementById("anonForm").addEventListener("submit", function (e) {
       e.preventDefault();
-      successAlert.classList.remove('d-none');
-      form.reset();
-      setTimeout(() => successAlert.classList.add('d-none'), 3000);
+
+      const message = document.getElementById("anonMessage").value;
+
+      fetch("https://script.google.com/macros/s/AKfycbxRklHiwcQB1PwxZScq4jg04vLeI6bIgo_r5iHqHhQMajcp20PaOzMV_xb4Qly51F3rhA/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: message })
+      })
+        .then(() => {
+          document.getElementById("anonSuccess").classList.remove("d-none");
+          document.getElementById("anonForm").reset();
+          setTimeout(() => {
+            document.getElementById("anonSuccess").classList.add("d-none");
+          }, 4000);
+        })
+        .catch((err) => {
+          alert("❌ Failed to send message. Please try again later.");
+          console.error(err);
+        });
     });
   </script>
-  <!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script>
-  // Initialize EmailJS
-  (function() {
-    emailjs.init("X8B_lsMX430ZPNraq"); // Replace with your EmailJS Public Key
-  })();
-
-  // Form submission handler
-  document.getElementById('anonForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    emailjs.send("service_wwz3bsp", "template_3keftax", {
-      message: document.getElementById('anonMessage').value
-    }).then(
-      function() {
-        document.getElementById('anonSuccess').classList.remove('d-none');
-        document.getElementById('anonForm').reset();
-        setTimeout(() => {
-          document.getElementById('anonSuccess').classList.add('d-none');
-        }, 4000);
-      },
-      function(error) {
-        alert("❌ Message failed to send. Please try again.");
-        console.error("EmailJS error:", error);
-      }
-    );
-  });
-</script>
-
 </body>
 </html>
