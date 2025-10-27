@@ -7,16 +7,25 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <style>
-    /* --- Page Hero --- */
+    body {
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background-color: #000A45 !important;
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #B3913C !important;
+    }
     .page-hero {
       background-color: #000A45;
       color: #fff;
       height: 30vh;
     }
-
-    /* --- Buttons --- */
     .btn-warning {
       background-color: #B3913C !important;
       border: none;
@@ -26,12 +35,9 @@
     .btn-warning:hover {
       background-color: #9a7e34 !important;
     }
-
-    /* --- Sidebar Headers --- */
     .card-header.bg-primary {
       background-color: #000A45 !important;
     }
-
     a {
       color: #000A45;
       text-decoration: none;
@@ -39,11 +45,15 @@
     a:hover {
       color: #B3913C;
     }
+    footer {
+      background-color: #000A45;
+      color: white;
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">NAHIMS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -52,17 +62,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="executives.html">Executives</a></li>
-          <li class="nav-item"><a class="nav-link" href="chapters.html">Accredited Chapters</a></li>
-          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="chapters.html">Chapters</a></li>
+          <li class="nav-item"><a class="nav-link active text-warning" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Hero -->
+  <!-- Hero Section -->
   <header class="page-hero d-flex align-items-center justify-content-center text-center">
     <div>
       <h1 class="display-5 fw-bold mb-3">NAHIMS Blog & Voices</h1>
@@ -71,40 +80,17 @@
   </header>
 
   <!-- Blog Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5">
     <div class="container">
       <div class="row">
         <!-- Blog Posts -->
-        <div class="col-lg-8 mb-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image" />
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Building the Future of HIM in Nigeria</h4>
-              <p class="card-text text-muted">October 2025 | Admin</p>
-              <p class="card-text">
-                Health Information Management is evolving rapidly, and NAHIMS is at the forefront of empowering students with
-                leadership and innovation skills that redefine the future of data-driven healthcare.
-              </p>
-              <a href="#" class="btn btn-warning">Read More</a>
-            </div>
-          </div>
-
-          <div class="card mb-4 shadow-sm">
-            <img src="https://via.placeholder.com/800x300" class="card-img-top" alt="Blog Image" />
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Volunteerism: The Spirit of NAHIMS</h4>
-              <p class="card-text text-muted">September 2025 | Editor</p>
-              <p class="card-text">
-                NAHIMS encourages all members to embrace community service as a way to grow, connect, and lead. Volunteerism remains a core pillar of our association’s culture and development.
-              </p>
-              <a href="#" class="btn btn-warning">Read More</a>
-            </div>
-          </div>
+        <div class="col-lg-8 mb-4" id="blogPosts">
+          <div class="text-center py-5 text-muted">Loading posts...</div>
         </div>
 
         <!-- Sidebar -->
         <div class="col-lg-4">
-          <!-- Anonymous Message Box -->
+          <!-- Anonymous Message -->
           <div class="card shadow-sm mb-4">
             <div class="card-header bg-primary text-white">
               <h5 class="mb-0">Send an Anonymous Message</h5>
@@ -112,13 +98,7 @@
             <div class="card-body">
               <form id="anonForm">
                 <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="anonMessage"
-                    rows="4"
-                    placeholder="Type your message..."
-                    required
-                  ></textarea>
+                  <textarea class="form-control" id="anonMessage" rows="4" placeholder="Type your message..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-warning w-100">Submit</button>
               </form>
@@ -133,10 +113,8 @@
             <div class="card-header bg-primary text-white">
               <h5 class="mb-0">🔥 Trending Now</h5>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><a href="#">New Leadership Opportunities Announced</a></li>
-              <li class="list-group-item"><a href="#">HIM Week 2025: Theme & Plans Revealed</a></li>
-              <li class="list-group-item"><a href="#">Call for Mentors: The Future of HIM</a></li>
+            <ul class="list-group list-group-flush" id="trendingList">
+              <li class="list-group-item">Loading trends...</li>
             </ul>
           </div>
         </div>
@@ -145,20 +123,61 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4 mt-5">
-    <div class="container text-center">
-      <p class="mb-2">&copy; <span id="currentYear"></span> NAHIMS UCH Students' Association. All Rights Reserved.</p>
-      <p class="mb-0">Contact: +234 XXX XXX XXXX | Email: secretariat@nahims.com.ng</p>
-    </div>
+  <footer class="text-center py-4">
+    <p class="mb-1">&copy; <span id="currentYear"></span> NAHIMS. All Rights Reserved.</p>
+    <p class="mb-0">Contact: nahimsnatl@gmail.com</p>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Google Apps Script Integration -->
+  <!-- Scripts -->
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxRklHiwcQB1PwxZScq4jg04vLeI6bIgo_r5iHqHhQMajcp20PaOzMV_xb4Qly51F3rhA/exec"; // Replace with your Apps Script link
+
+    // === Load Blog Posts ===
+    function loadBlogPosts() {
+      fetch(scriptURL)
+        .then(res => res.json())
+        .then(posts => {
+          const container = document.getElementById("blogPosts");
+          if (!posts.length) {
+            container.innerHTML = "<div class='text-center py-5 text-muted'>No posts yet.</div>";
+            return;
+          }
+
+          container.innerHTML = "";
+          posts.reverse().forEach(post => {
+            container.innerHTML += `
+              <div class="card mb-4 shadow-sm">
+                ${post.Image ? `<img src="${post.Image}" class="card-img-top" alt="Blog Image">` : ""}
+                <div class="card-body">
+                  <h4 class="card-title fw-bold">${post.Title}</h4>
+                  <p class="text-muted">${post.Author} | ${post.Date}</p>
+                  <p>${post.Content.substring(0, 200)}...</p>
+                  <button class="btn btn-warning" onclick="alert('Feature coming soon!')">Read More</button>
+                </div>
+              </div>`;
+          });
+
+          // Optional: populate trending
+          const trending = document.getElementById("trendingList");
+          trending.innerHTML = "";
+          posts.slice(-3).reverse().forEach(post => {
+            trending.innerHTML += `<li class="list-group-item"><a href="#">${post.Title}</a></li>`;
+          });
+        })
+        .catch(err => {
+          document.getElementById("blogPosts").innerHTML = "<div class='text-center py-5 text-danger'>⚠️ Error loading posts</div>";
+          console.error(err);
+        });
+    }
+
+    loadBlogPosts();
+
+    // === Anonymous Message ===
     document.getElementById("anonForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -168,19 +187,17 @@
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: message })
+        body: JSON.stringify({ message })
       })
-        .then(() => {
-          document.getElementById("anonSuccess").classList.remove("d-none");
-          document.getElementById("anonForm").reset();
-          setTimeout(() => {
-            document.getElementById("anonSuccess").classList.add("d-none");
-          }, 4000);
-        })
-        .catch((err) => {
-          alert("❌ Failed to send message. Please try again later.");
-          console.error(err);
-        });
+      .then(() => {
+        document.getElementById("anonSuccess").classList.remove("d-none");
+        document.getElementById("anonForm").reset();
+        setTimeout(() => document.getElementById("anonSuccess").classList.add("d-none"), 4000);
+      })
+      .catch(err => {
+        alert("❌ Failed to send message. Try again later.");
+        console.error(err);
+      });
     });
   </script>
 </body>
