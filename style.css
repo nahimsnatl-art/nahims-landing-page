@@ -11,6 +11,16 @@
 /* 捗 General & Layout */
 /* ====================================== */
 
+/* --- General Link Styling --- */
+a {
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+
+a:hover {
+  color: var(--accent-yellow);
+}
+
 /* --- Navbar Styling --- */
 .navbar {
   background-color: #ffffff !important; /* Clean white background */
@@ -107,15 +117,17 @@ footer {
   cursor: pointer;
 }
 
-/* --- Page Hero (for 'About', 'Chapters', etc.) --- */
+/* --- Page Hero (for 'About', 'Chapters', 'Blog', etc.) --- */
 .page-hero {
   background-color: var(--primary-blue) !important;
   color: #ffffff !important;
-  height: 40vh;
+  height: 40vh; /* Standardized height */
   text-align: center;
   display: flex;
+  flex-direction: column; /* Added for vertical stacking */
   align-items: center;
   justify-content: center;
+  padding: 20px; /* Added padding for smaller screens */
 }
 
 .hero-logo {
@@ -159,6 +171,10 @@ footer {
     color: #ffffff;
 }
 
+/* --- Card Headers --- */
+.card-header.bg-primary {
+  background-color: var(--primary-blue) !important;
+}
 
 /* --- Executive Cards --- */
 .executive-card {
@@ -192,7 +208,7 @@ footer {
     background-color: var(--primary-blue) !important;
 }
 
-
+/* --- Status Pills (for 'Chapters' page) --- */
 .status {
   display: inline-block;
   padding: 0.4rem 1rem;
@@ -367,34 +383,8 @@ footer {
   color: #212529; /* Standard dark text color */
 }
 
-
-/* --- Blog Page Styling --- */
-.page-hero {
-  background-color: #000A45;
-  color: white;
-  height: 30vh;
-}
-
-.card-header.bg-primary {
-  background-color: #000A45 !important;
-}
-
-.btn-warning {
-  background-color: #B3913C !important;
-  color: white !important;
-  border: none;
-  font-weight: 600;
-}
-
-.btn-warning:hover {
-  background-color: #9a7e34 !important;
-}
-
-a {
-  text-decoration: none;
-  color: #000A45;
-}
-
-a:hover {
-  color: #B3913C;
-}
+/* REMOVED DUPLICATE STYLES FROM HERE.
+  All styles from blog.html have been merged
+  with the existing styles above for a single,
+  clean stylesheet.
+*/
