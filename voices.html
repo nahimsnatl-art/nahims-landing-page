@@ -89,43 +89,50 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwfIF6qGbl74Db2QsJxGMEgdcftSsXMEAP_q5k1670J45BRiRSs079kwPRIC7xRGsRiBA/exec";
 
-    const form = document.getElementById('anonForm');
-    const msgEl = document.getElementById('anonMessage');
-    const successEl = document.getElementById('anonSuccess');
-    const errorEl = document.getElementById('anonError');
+  document.getElementById("anonForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const message = msgEl.value.trim();
-      if (!message) {
-        errorEl.textContent = 'Message cannot be empty.';
-        errorEl.classList.remove('d-none');
-        successEl.classList.add('d-none');
-        return;
+    const message = document.getElementById("anonMessage").value.trim();
+    const successEl = document.getElementById("anonSuccess");
+    const errorEl = document.getElementById("anonError");
+
+    successEl.classList.add("d-none");
+    errorEl.classList.add("d-none");
+
+    if (!message) {
+      errorEl.textContent = "Message cannot be empty.";
+      errorEl.classList.remove("d-none");
+      return;
+    }
+
+    try {
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await res.json();
+      if (data.status === "success") {
+        successEl.classList.remove("d-none");
+        e.target.reset();
+      } else {
+        errorEl.textContent = data.message || "Something went wrong.";
+        errorEl.classList.remove("d-none");
       }
 
-      // Call server-side receiveAnon() via google.script.run
-      google.script.run.withSuccessHandler(function(response) {
-        if (response && response.status === 'success') {
-          successEl.classList.remove('d-none');
-          errorEl.classList.add('d-none');
-          form.reset();
-          setTimeout(() => successEl.classList.add('d-none'), 4000);
-        } else {
-          errorEl.textContent = (response && response.message) ? response.message : 'Failed to send message.';
-          errorEl.classList.remove('d-none');
-          successEl.classList.add('d-none');
-        }
-      }).withFailureHandler(function(err) {
-        errorEl.textContent = 'Server error. Please try again later.';
-        errorEl.classList.remove('d-none');
-        successEl.classList.add('d-none');
-        console.error('google.script.run failure:', err);
-      }).receiveAnon(message);
-    });
-  </script>
+    } catch (err) {
+      console.error(err);
+      errorEl.textContent = "Server error — please try again later.";
+      errorEl.classList.remove("d-none");
+    }
+  });
+</script>
+
 </body>
 </html>
